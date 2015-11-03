@@ -15,6 +15,9 @@ public class BST<T extends Comparable<T>>{
 		}
 	}
 	
+	//Loops through tree using direction to determine to go
+	//left or right in the tree to find the place to add the 
+	//element
 	public void add(T obj) throws IllegalArgumentException{
 		
 		Node<T> node = tree;
@@ -46,6 +49,8 @@ public class BST<T extends Comparable<T>>{
 		node.setDirection(direction, new Node<T>(obj));
 	}
 	
+	//Searches the tree for the inputted object and throws 
+	//a NoSuchElementException if the object is not in the tree
 	public Node<T> search(T obj) throws NoSuchElementException{
 		
 		Node<T> node = tree;
@@ -73,6 +78,8 @@ public class BST<T extends Comparable<T>>{
 		throw new NoSuchElementException();
 	}
 	
+	//Deletes the inputted object from the tree or throws a
+	//NoSuchElementException if the object is not in the tree
 	public boolean delete(T obj) throws NoSuchElementException{
 		
 		Node<T> node = tree;
